@@ -39,8 +39,7 @@ void	get_min(t_stack *stack, int *min)
 		if (min[0] > tmp->next->nbr)
 		{
 			min[0] = tmp->next->nbr;
-			min[1] = i <= stack->size_a / 2 + stack->size_a % 2 ? 1 : 0;
-			min[1] = i == 2 && stack->size_a == 5 ? 1 : min[1];
+			min[1] = i + 1 <= stack->size_a / 2 + stack->size_a % 2 ? 1 : 0;
 		}
 		i++;
 		tmp = tmp->next;
