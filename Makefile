@@ -15,7 +15,7 @@ NAME2 = checker
 
 HEADER = pushswap.h
 
-FLAGS = -Wall -Wextra -Werror -I includes/
+FLAGS = ‘  ‘#-Wall -Wextra -Werror -I includes/
 
 SRC = push_swap.c\
 		push.c\
