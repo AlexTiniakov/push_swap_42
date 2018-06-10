@@ -15,9 +15,7 @@
 void	*ft_memalloc(size_t size)
 {
 	void *v;
-	char c;
 
-	c = 0;
 	v = malloc(size);
 	if (!v)
 		return (NULL);
