@@ -33,6 +33,7 @@ void	get_min(t_stack *stack, int *min)
 
 	tmp = stack->a;
 	min[0] = tmp->nbr;
+   min[1] = 1;
 	i = 1;
 	while (tmp && tmp->next)
 	{
