@@ -29,6 +29,10 @@
 # include <wchar.h>
 # include <fcntl.h>
 
+# define intmax_t long long
+# define uintmax_t unsigned long long
+
+
 typedef struct		s_p
 {
 	int				reshetka : 1;
