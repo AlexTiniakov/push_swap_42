@@ -15,7 +15,7 @@ NAME2 = checker
 
 HEADER = pushswap.h
 
-FLAGS = -Wall -Wextra -Werror -I includes/
+FLAGS = -I includes/
 
 SRC = push_swap.c\
 		push.c\
@@ -64,7 +64,7 @@ $(NAME2): $(CHKOBJ)
 	@gcc -o $(NAME2) $(CHKOBJ) $(LIB)
 	@echo "\033[1;92mpush_swap and checker are created!\033[1;92m"
 
-clean: 
+clean:
 	@make -C libft/ clean
 	@rm -f $(OBJ) $(CHKOBJ)
 

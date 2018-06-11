@@ -44,6 +44,7 @@ typedef struct		s_stack
 	t_nbr			*b;
 	int				size_a;
 	int				size_b;
+	char			*rez;
 }					t_stack;
 
 typedef void		(*t_func)(t_stack *);

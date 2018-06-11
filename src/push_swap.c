@@ -12,16 +12,21 @@
 
 #include <pushswap.h>
 
+
+
 int		main(int ac, char **av)
 {
 	t_stack		stack;
 
    stack.a = NULL;
    stack.b = NULL;
+   stack.rez = NULL;
 	stack.size_a = ac - 1;
    stack.size_b = 0;
 	if (!ft_create_stack(ac, av, &stack, 0))
 		return (write(1, "Error\n", 6));
 	ft_sort_hard(&stack);
+//	ft_check_rez(&stack);
+write(1, stack.rez, ft_strlen(stack.rez));
 	return (0);
 }

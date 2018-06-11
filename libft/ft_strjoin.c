@@ -19,9 +19,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	len = ft_strlen(s1) + ft_strlen(s2);
 	str = (char *)malloc(sizeof(*str) * (len + 1));
-	if (str == NULL || s1 == NULL || s2 == NULL)
+	if (str == NULL)
 		return (NULL);
-	ft_strcpy(str, s1);
-	ft_strcat(str, s2);
+	if (s1)
+		ft_strcpy(str, s1);
+	if (s2)
+		ft_strcat(str, s2);
 	return (str);
 }

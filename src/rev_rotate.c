@@ -22,6 +22,7 @@ void	ft_rrb(t_stack *stack)
 {
 	t_nbr *tmp;
 	t_nbr *tmp1;
+	char *str;
 
 	if (stack->b && stack->b->next)
 	{
@@ -33,7 +34,9 @@ void	ft_rrb(t_stack *stack)
 		tmp = tmp1;
 		tmp->next = stack->b;
 		stack->b = tmp;
-		write(1, "rrb\n", 4);
+		str = stack->rez;
+		stack->rez = ft_strjoin(stack->rez, "rrb\n");
+		free(str);
 	}
 }
 
@@ -41,6 +44,7 @@ void	ft_rra(t_stack *stack)
 {
 	t_nbr *tmp;
 	t_nbr *tmp1;
+	char *str;
 
 	if (stack->a && stack->a->next)
 	{
@@ -52,6 +56,8 @@ void	ft_rra(t_stack *stack)
 		tmp = tmp1;
 		tmp->next = stack->a;
 		stack->a = tmp;
-		write(1, "rra\n", 4);
+		str = stack->rez;
+		stack->rez = ft_strjoin(stack->rez, "rra\n");
+		free(str);
 	}
 }

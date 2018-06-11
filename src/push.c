@@ -15,6 +15,7 @@
 void	ft_pb(t_stack *stack)
 {
 	t_nbr *tmp;
+	char *str;
 
 	if (stack && stack->a)
 	{
@@ -24,13 +25,16 @@ void	ft_pb(t_stack *stack)
 		stack->b->next = tmp;
 		stack->size_a--;
 		stack->size_b++;
-		write(1, "pb\n", 3);
+		str = stack->rez;
+		stack->rez = ft_strjoin(stack->rez, "pb\n");
+		free(str);
 	}
 }
 
 void	ft_pa(t_stack *stack)
 {
 	t_nbr *tmp;
+	char *str;
 
 	if (stack && stack->b)
 	{
@@ -40,6 +44,8 @@ void	ft_pa(t_stack *stack)
 		stack->a->next = tmp;
 		stack->size_a++;
 		stack->size_b--;
-		write(1, "pa\n", 3);
+		str = stack->rez;
+		stack->rez = ft_strjoin(stack->rez, "pa\n");
+		free(str);
 	}
 }
