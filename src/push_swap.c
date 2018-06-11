@@ -12,7 +12,20 @@
 
 #include <pushswap.h>
 
-
+void ft_check_rez(t_stack *stack)
+{
+	//pa\npb\n 6
+	//pb\npa\n 6
+	//ra\nrra\n 7
+	//rra\nra\n 7
+	//rb\nrrb\n 7
+	//rrb\nrb\n 7
+	//ra\nrb\n -> rr\n
+	//rb\nra\n -> rr\n
+	//rra\nrrb\n -> rrr\n
+	//rrb\nrra\n -> rrr\n
+	;
+}
 
 int		main(int ac, char **av)
 {
@@ -26,7 +39,7 @@ int		main(int ac, char **av)
 	if (!ft_create_stack(ac, av, &stack, 0))
 		return (write(1, "Error\n", 6));
 	ft_sort_hard(&stack);
-//	ft_check_rez(&stack);
+	ft_check_rez(&stack);
 write(1, stack.rez, ft_strlen(stack.rez));
 	return (0);
 }
