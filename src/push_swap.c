@@ -30,7 +30,7 @@ void ft_check_rez(t_stack *stack, char *str, char *tmp, char *tab)
 ft_strstr(stack->rez, "rb\nrrb\n") || ft_strstr(stack->rez, "rrb\nrb\n"))
 	    //del using memmove or strjoin
 {
-    if ((str = ft_strstr(stack->rez, "pa\npb\n"))
+    if ((str = ft_strstr(stack->rez, "pa\npb\n") != NULL)
     {
         tab = stack->rez;
         tmp = ft_strncpy((char *)malloc(ft_strlen(tab)), tab, str - tab);
