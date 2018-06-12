@@ -32,7 +32,7 @@ ft_strstr(stack->rez, "rb\nrrb\n") || ft_strstr(stack->rez, "rrb\nrb\n"))
     if ((str = ft_strstr(stack->rez, "pa\npb\n")))
     {
         tab = stack->rez;
-        tmp = ft_strncpy((char *)malloc(ft_strlen(tab)), tab, str - tab);
+        tmp = ft_strncpy((char *)malloc(ft_strlen(tab)), tab, str - tab - 1);
         stack->rez = ft_strjoin(tmp, str + 6);
         free(tab);
         free(tmp);
@@ -40,7 +40,7 @@ ft_strstr(stack->rez, "rb\nrrb\n") || ft_strstr(stack->rez, "rrb\nrb\n"))
     if ((str = ft_strstr(stack->rez, "pb\npa\n")))
     {
         tab = stack->rez;
-        tmp = ft_strncpy((char *)malloc(ft_strlen(tab)), tab, str - tab);
+        tmp = ft_strncpy((char *)malloc(ft_strlen(tab)), tab, str - tab - 1);
         stack->rez = ft_strjoin(tmp, str + 6);
         free(tab);
         free(tmp);
@@ -48,7 +48,7 @@ ft_strstr(stack->rez, "rb\nrrb\n") || ft_strstr(stack->rez, "rrb\nrb\n"))
     if ((str = ft_strstr(stack->rez, "ra\nrra\n")))
     {
         tab = stack->rez;
-        tmp = ft_strncpy((char *)malloc(ft_strlen(tab)), tab, str - tab);
+        tmp = ft_strncpy((char *)malloc(ft_strlen(tab)), tab, str - tab - 1);
         stack->rez = ft_strjoin(tmp, str + 7);
         free(tab);
         free(tmp);
@@ -56,7 +56,7 @@ ft_strstr(stack->rez, "rb\nrrb\n") || ft_strstr(stack->rez, "rrb\nrb\n"))
     if ((str = ft_strstr(stack->rez, "rra\nra\n")))
     {
         tab = stack->rez;
-        tmp = ft_strncpy((char *)malloc(ft_strlen(tab)), tab, str - tab);
+        tmp = ft_strncpy((char *)malloc(ft_strlen(tab)), tab, str - tab - 1);
         stack->rez = ft_strjoin(tmp, str + 7);
         free(tab);
         free(tmp);
@@ -64,7 +64,7 @@ ft_strstr(stack->rez, "rb\nrrb\n") || ft_strstr(stack->rez, "rrb\nrb\n"))
     if ((str = ft_strstr(stack->rez, "rb\nrrb\n")))
     {
         tab = stack->rez;
-        tmp = ft_strncpy((char *)malloc(ft_strlen(tab)), tab, str - tab);
+        tmp = ft_strncpy((char *)malloc(ft_strlen(tab)), tab, str - tab - 1);
         stack->rez = ft_strjoin(tmp, str + 7);
         free(tab);
         free(tmp);
@@ -72,7 +72,7 @@ ft_strstr(stack->rez, "rb\nrrb\n") || ft_strstr(stack->rez, "rrb\nrb\n"))
     if ((str = ft_strstr(stack->rez, "rrb\nrb\n")))
     {
         tab = stack->rez;
-        tmp = ft_strncpy((char *)malloc(ft_strlen(tab)), tab, str - tab);
+        tmp = ft_strncpy((char *)malloc(ft_strlen(tab)), tab, str - tab - 1);
         stack->rez = ft_strjoin(tmp, str + 7);
         free(tab);
         free(tmp);
