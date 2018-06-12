@@ -72,17 +72,26 @@ ft_strstr(stack->rez, "\nrb\nrrb\n") || ft_strstr(stack->rez, "rrb\nrb\n"))
 int		main(int ac, char **av)
 {
 	t_stack		stack;
-	char *str;
+	t_stack     stk;
 
    stack.a = NULL;
    stack.b = NULL;
    stack.rez = NULL;
 	stack.size_a = ac - 1;
    stack.size_b = 0;
+   stk.a = NULL;
+   stk.b = NULL;
+   stk.rez = NULL;
+    stk.size_a = ac - 1;
+   stk.size_b = 0;
 	if (!ft_create_stack(ac, av, &stack, 0))
 		return (write(1, "Error\n", 6));
+	if (!ft_create_stack(ac, av, &stk, 0))
+		return (write(1, "Error\n", 6));
 	ft_sort_hard(&stack);
+	ft_sort_buble(&stk);
 	ft_check_rez(&stack, NULL, NULL, NULL);
-	write(1, stack.rez, ft_strlen(stack.rez));
+	ft_check_rez(&stk, NULL, NULL, NULL);
+	ft_strlen(stack.rez) < ft_strlen(stk.rez) ? write(1, stack.rez, ft_strlen(stack.rez)) : write(1, stk.rez, ft_strlen(stk.rez));
 	return (0);
 }
