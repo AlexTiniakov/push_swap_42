@@ -32,7 +32,7 @@ ft_strstr(stack->rez, "rb\nrrb\n") || ft_strstr(stack->rez, "rrb\nrb\n"))
     if ((str = ft_strstr(stack->rez, "pa\npb\n")))
     {
         tab = stack->rez;
-        tmp = ft_strncpy((char *)malloc(ft_strlen(tab)), tab, str - tab - 1);
+        tmp = ft_strncpy((char *)malloc(ft_strlen(tab)), tab, str - tab);
         stack->rez = ft_strjoin(tmp, str + 6);
         free(tab);
         free(tmp);
@@ -40,39 +40,39 @@ ft_strstr(stack->rez, "rb\nrrb\n") || ft_strstr(stack->rez, "rrb\nrb\n"))
     else if ((str = ft_strstr(stack->rez, "pb\npa\n")))
     {
         tab = stack->rez;
-        tmp = ft_strncpy((char *)malloc(ft_strlen(tab)), tab, str - tab - 1);
+        tmp = ft_strncpy((char *)malloc(ft_strlen(tab)), tab, str - tab);
         stack->rez = ft_strjoin(tmp, str + 6);
         free(tab);
         free(tmp);
     }
-    else if ((str = ft_strstr(stack->rez, "ra\nrra\n")))
+    else if ((str = ft_strstr(stack->rez, "\nra\nrra\n")))
     {
         tab = stack->rez;
-        tmp = ft_strncpy((char *)malloc(ft_strlen(tab)), tab, str - tab - 1);
-        stack->rez = ft_strjoin(tmp, str + 7);
+        tmp = ft_strncpy((char *)malloc(ft_strlen(tab)), tab, str - tab + 1);
+        stack->rez = ft_strjoin(tmp, str + 8);
         free(tab);
         free(tmp);
     }
     else if ((str = ft_strstr(stack->rez, "rra\nra\n")))
     {
         tab = stack->rez;
-        tmp = ft_strncpy((char *)malloc(ft_strlen(tab)), tab, str - tab - 1);
+        tmp = ft_strncpy((char *)malloc(ft_strlen(tab)), tab, str - tab);
         stack->rez = ft_strjoin(tmp, str + 7);
         free(tab);
         free(tmp);
     }
-    else if ((str = ft_strstr(stack->rez, "rb\nrrb\n")))
+    else if ((str = ft_strstr(stack->rez, "\nrb\nrrb\n")))
     {
         tab = stack->rez;
-        tmp = ft_strncpy((char *)malloc(ft_strlen(tab)), tab, str - tab - 1);
-        stack->rez = ft_strjoin(tmp, str + 7);
+        tmp = ft_strncpy((char *)malloc(ft_strlen(tab)), tab, str - tab + 1);
+        stack->rez = ft_strjoin(tmp, str + 8);
         free(tab);
         free(tmp);
     }
     else if ((str = ft_strstr(stack->rez, "rrb\nrb\n")))
     {
         tab = stack->rez;
-        tmp = ft_strncpy((char *)malloc(ft_strlen(tab)), tab, str - tab - 1);
+        tmp = ft_strncpy((char *)malloc(ft_strlen(tab)), tab, str - tab);
         stack->rez = ft_strjoin(tmp, str + 7);
         free(tab);
         free(tmp);
@@ -96,7 +96,7 @@ int		main(int ac, char **av)
 	if (!ft_create_stack(ac, av, &stack, 0))
 		return (write(1, "Error\n", 6));
 	ft_sort_hard(&stack);
-	//ft_check_rez(&stack, NULL, NULL, NULL);
+	ft_check_rez(&stack, NULL, NULL, NULL);
 write(1, stack.rez, ft_strlen(stack.rez));
 	return (0);
 }
