@@ -25,8 +25,8 @@ void ft_check_rez(t_stack *stack, char *str, char *tmp, char *tab)
 	//rra\nrrb\n -> rrr\n
 	//rrb\nrra\n -> rrr\n
 
-    while (ft_strstr(stack->rez, "pa\npb\n") || ft_strstr(stack->rez, "pb\npa\n")
-|| ft_strstr(stack->rez, "ra\nrra\n") || ft_strstr(stack->rez, "rra\nra\n") ||
+    while (ft_strstr(stack->rez, "pa\npb\n") || ft_strstr(stack->rez, "pb\npa\n")\
+|| ft_strstr(stack->rez, "ra\nrra\n") || ft_strstr(stack->rez, "rra\nra\n") ||\
 ft_strstr(stack->rez, "rb\nrrb\n") || ft_strstr(stack->rez, "rrb\nrb\n"))
 {
     if ((str = ft_strstr(stack->rez, "pa\npb\n"))
@@ -78,7 +78,7 @@ ft_strstr(stack->rez, "rb\nrrb\n") || ft_strstr(stack->rez, "rrb\nrb\n"))
         free(tmp);
     }
 }
-    while (ft_strstr(stack->rez, "ra\nrb\n") || ft_strstr(stack->rez, "rb\nra\n")
+    while (ft_strstr(stack->rez, "ra\nrb\n") || ft_strstr(stack->rez, "rb\nra\n")\
 || ft_strstr(stack->rez, "rra\nrrb\n") || ft_strstr(stack->rez, "rrb\nrra\n"))
        ;//change to r 
 
