@@ -27,10 +27,10 @@ void ft_check_rez(t_stack *stack)
     while (ft_strstr(stack->rez, “pa\npb\n”) || ft_strstr(stack->rez, “pb\npa\n”)\
 || ft_strstr(stack->rez, “ra\nrra\n”) || ft_strstr(stack->rez, “rra\nra\n”) ||\
 ft_strstr(stack->rez, “rb\nrrb\n”) || ft_strstr(stack->rez, “rrb\nrb\n”))
-	    ;//del
+	    ;//del using memmove or strjoin
     while (ft_strstr(stack->rez, “ra\nrb\n”) || ft_strstr(stack->rez, “rb\nra\n”)\
 || ft_strstr(stack->rez, “rra\nrrb\n”) || ft_strstr(stack->rez, “rrb\nrra\n”))
-       ;//change to r
+       ;//change to r 
 }
 
 int		main(int ac, char **av)
