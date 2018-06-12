@@ -12,7 +12,7 @@
 
 #include <pushswap.h>
 
-void ft_check_rez(t_stack *stack)
+void ft_check_rez(t_stack *stack, char *str, char *tmp, char *tab)
 {
 	//pa\npb\n 6
 	//pb\npa\n 6
@@ -24,8 +24,6 @@ void ft_check_rez(t_stack *stack)
 	//rb\nra\n -> rr\n
 	//rra\nrrb\n -> rrr\n
 	//rrb\nrra\n -> rrr\n
-
-    char *str;
 
     while (ft_strstr(stack->rez, “pa\npb\n”) || ft_strstr(stack->rez, “pb\npa\n”)\
 || ft_strstr(stack->rez, “ra\nrra\n”) || ft_strstr(stack->rez, “rra\nra\n”) ||\
