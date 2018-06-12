@@ -78,11 +78,11 @@ ft_strstr(stack->rez, "rb\nrrb\n") || ft_strstr(stack->rez, "rrb\nrb\n"))
         free(tab);
         free(tmp);
     }
-}/*
-    while (ft_strstr(stack->rez, “ra\nrb\n”) || ft_strstr(stack->rez, “rb\nra\n”)
-|| ft_strstr(stack->rez, “rra\nrrb\n”) || ft_strstr(stack->rez, “rrb\nrra\n”))
+}
+    while (ft_strstr(stack->rez, "ra\nrb\n") || ft_strstr(stack->rez, "rb\nra\n")
+|| ft_strstr(stack->rez, "rra\nrrb\n") || ft_strstr(stack->rez, "rrb\nrra\n"))
        ;//change to r 
-*/
+
 }
 
 int		main(int ac, char **av)
