@@ -96,7 +96,7 @@ int		main(int ac, char **av)
 	if (!ft_create_stack(ac, av, &stack, 0))
 		return (write(1, "Error\n", 6));
 	ft_sort_hard(&stack);
-	ft_check_rez(&stack, NULL, NULL, NULL);
+	//ft_check_rez(&stack, NULL, NULL, NULL);
 write(1, stack.rez, ft_strlen(stack.rez));
 	return (0);
 }
