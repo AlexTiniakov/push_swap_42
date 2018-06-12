@@ -32,9 +32,13 @@ void ft_check_rez(t_stack *stack)
 ft_strstr(stack->rez, “rb\nrrb\n”) || ft_strstr(stack->rez, “rrb\nrb\n”))
 	    //del using memmove or strjoin
     if ((str = ft_strstr(stack->rez, “pa\npb\n”))
+    {
         tab = stack->rez;
-        tmp = ft_strncpy();
-        stack->rez = ft_strjoin()
+        tmp = ft_strncpy((char *)malloc(ft_strlen(tab)), tab, str - tab);
+        stack->rez = ft_strjoin(tmp, str + 6);
+        free(tab);
+        free(tmp);
+    }
     while (ft_strstr(stack->rez, “ra\nrb\n”) || ft_strstr(stack->rez, “rb\nra\n”)\
 || ft_strstr(stack->rez, “rra\nrrb\n”) || ft_strstr(stack->rez, “rrb\nrra\n”))
        ;//change to r 
