@@ -90,8 +90,8 @@ int		main(int ac, char **av)
 		return (write(1, "Error\n", 6));
 	ft_sort_hard(&stack);
 	ft_sort_buble(&stk);
-	ft_check_rez(&stack, NULL, NULL, NULL);
-	ft_check_rez(&stk, NULL, NULL, NULL);
+	//ft_check_rez(&stack, NULL, NULL, NULL);
+	//ft_check_rez(&stk, NULL, NULL, NULL);
 	ft_strlen(stack.rez) < ft_strlen(stk.rez) ? write(1, stack.rez, ft_strlen(stack.rez)) : write(1, stk.rez, ft_strlen(stk.rez));
 	return (0);
 }
