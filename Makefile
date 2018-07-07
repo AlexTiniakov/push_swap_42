@@ -13,6 +13,8 @@
 NAME = push_swap
 NAME2 = checker
 
+
+
 HEADER = pushswap.h
 
 FLAGS = -I includes/
